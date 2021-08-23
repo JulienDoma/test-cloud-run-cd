@@ -10,4 +10,7 @@ def root():
 
 @app.get("/addition")
 def addition(first, second):
-    return f"{first} + {second} = {first + second}"
+    first = int(first)
+    second = int(second)
+    res = first + second
+    return f"{first} + {second} = {res}"
